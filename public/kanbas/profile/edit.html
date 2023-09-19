@@ -48,6 +48,9 @@
                 <label for="select-pronouns">Pronouns:</label>
                 <select id="select-pronouns">
                     <option selected>None</option>
+                    <option>she/her/hers</option>
+                    <option>he/him/his</option>
+                    <option>they/them/theirs</option>
                 </select>
 
                 <p>
@@ -57,13 +60,11 @@
 
                 <h3>Contact</h3>
                 <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-                <h3>Contact</h3>
-                <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
-
+                
                 <h3>Biography</h3>
                 <form>
-                    Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-                    <textarea>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
+                    <div>Faculty, Software Engineer, AI, Space, and renewables enthusiast.</div>
+                    <textarea cols="60" rows="6">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
                 </form>
 
                 <h3>Links</h3>
@@ -72,10 +73,10 @@
                 </ul>
                 <label for="input-link" style="margin-left: 4em;">Title</label>
                 <label for="input-link" style="margin-left: 9em;">URL</label>
-                <div><input id="input-link" value="YouTube"/> <input id="input-link" value="https://www.youtube.com"/></div>
+                <div><input id="input-link" value="YouTube"/><span> &rarr; </span><input id="input-link" value="https://www.youtube.com"/><a href="#">Remove</a></div>
                 <button>Add another link</button>
                 <div>
-                    <button >Cancel</button>
+                    <button onclick="location.href='index.html'">Cancel</button>
                     <button onclick="location.href='index.html'">Save Profile</button>
                 </div>
                 <div>
