@@ -1,0 +1,253 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/*KANBAS NAVIGATION*/
+.kanbas-nav.nav {
+    width: 85px;
+}
+.kanbas-nav.nav-pills .nav-link{
+    text-align: center;
+    font-size: 15px;
+    border-radius: 0;
+    width: 85px;
+    background-color: black;
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+}
+
+.kanbas-nav.nav-pills .nav-link .fa{
+    color: red;
+
+}
+
+.kanbas-nav.nav-pills .nav-link.active{
+    border-radius: 0;
+    width: 85px;
+    background-color: white;
+    color: red;
+
+}
+
+/*ACCOUNT NAVIGATION*/
+
+.account-nav.list-group {
+    border: none;
+    border-radius: 0px;
+    width: 190px;
+    
+}
+
+.account-nav .list-group-item {
+    border: none;
+    border-radius: 0px;
+    color: #b52828;
+    padding-left: 10px;
+}
+
+.account-nav .list-group-item.active {
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    border-left: 3px solid black;
+    color: black;
+}
+
+
+.flex-row-container {
+    flex-grow: 3;
+    display: flex;
+    flex-direction: row;
+}
+.main-screen {
+    flex-grow: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: left;
+}
+
+.btn {
+    background-color: #f5f5f5;
+    border-color: #c7cdd1;
+    border-radius: 2px;
+    color: #2d3b45;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.btn-red {
+    border-color: #d41b2c;
+    background-color: #d41b2c;
+    color: white;
+}
+
+.inline-link {
+    color:#b52828;
+    text-decoration: none;
+}
+/*PROFILE*/
+
+.profile-secondary.float-end {
+    flex-grow: 1;
+    text-align: right;
+}
+
+
+
+.profile-footer {
+    text-align: right;
+}
+
+
+/*DASHBOARD*/
+.dash-published-courses {
+    margin-left: 16px;
+}
+.card {
+    width: 270px;
+    padding: 0px;
+    margin: 15px;
+}
+.card-link {
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 215px;
+    display: inline-block;
+}
+.card .card-header {
+    padding: 0px;
+}
+
+/*COURSE NAVIGATION*/
+.course-nav.list-group {
+    border-radius: 0px;
+    width: 190px;
+    
+}
+.course-nav .list-group-item {
+    border: none;
+    border-radius: 0px;
+    color: #b52828;
+    padding-left: 10px;
+}
+.course-nav .list-group-item.active {
+    background-color: white;
+    border: none;
+    border-radius: 0px;
+    border-left: 3px solid black;
+    color: black;
+}
+
+/*home*/
+
+.modules .list-group-item {
+    border-radius: 0px;
+    padding-left: 10px;
+}
+
+.modules .list-group-content {
+    border-left: 3px solid green;
+    color: #2d3b45;
+}
+
+.module-item {
+    padding-left: 30px;
+}
+.module-link a{
+    text-decoration: none;
+    color:#d41b2c;
+}
+.fa-circle-check {
+    margin-right: 30px;
+    color:forestgreen;
+}
+
+.fa-link {
+    color:limegreen;
+}
+
+/*ASSIGNMENTS*/
+
+
+.assignment-desc {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+.assignment-desc a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-pen-to-square {
+    color: forestgreen;
+}
+
+.form-control-center {
+    display: inline-block;
+}
+.form-group {
+    border: solid 1px;
+    border-radius: 3px;
+    border-color: #c7cdd1;
+    padding: 10px;
+}
+
+/*GRADES*/
+.breadcrumb-item {
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 125px;
+}
+
+/*All*/
+.btn i{
+    margin-right: 5px;
+}
+
+.list-group {
+    border-radius: 0px;
+    
+}
+.list-group-item {
+    text-align: left;
+}
+
+li i{
+    padding-right: 5px;
+}
+.screen-primary {
+    flex-grow: 1;
+}
+.profile-primary {
+    flex-grow: 1;
+}
+
+.navbar-nav {
+    display: block;
+    align-items: start;
+    flex-grow: 1;
+}
+
+.navbar-nav .nav-link {
+    color:#b52828;
+}
+
+.breadcrumb-item a{
+    text-decoration: none;
+    color:#b52828;
+}
+
+small {
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+}
+
