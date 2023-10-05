@@ -22,13 +22,13 @@
           </button>
         <div class="collapse navbar-collapse navbar-nav text-left" id="kanbas-nav">
             <div class="navbar-nav bg-dark">
-                <a class="nav-item nav-link active" href="home.html">Home</a>
+                <a class="nav-item nav-link" href="../home.html">Home</a>
                 <a class="nav-link" href="#">Modules</a>
                 <a class="nav-link" href="#">Piazza</a>
                 <a class="nav-link" href="#">Zoom Meetings</a>
-                <a class="nav-link" href="#">Assignments</a>
+                <a class="nav-link" href="index.html">Assignments</a>
                 <a class="nav-link" href="#">Quizzes</a>
-                <a class="nav-link" href="#">Grades</a>
+                <a class="nav-link" href="../grades.html">Grades</a>
                 <a class="nav-link" href="#">People</a>
                 <a class="nav-link" href="#">Panopto Video</a>
                 <a class="nav-link" href="#">Discussions</a>
@@ -86,7 +86,7 @@
     <!---Kanbas Navigation-->
     <div class="kanbas-nav nav flex-column nav-pills d-none d-md-block" aria-orientation="vertical">
         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#" role="tab" aria-controls="v-pills-home" aria-selected="true">
-            <img style="width: 60px; padding: 0px;" src="../neu-banner.png" alt="Image"></a>
+            <img src="../neu-banner.png" alt="Image"></a>
         <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="../accountNav.html" role="tab" aria-controls="v-pills-home" aria-selected="true">
             <i class="fa fa-regular fa-user fa-2x"></i>
             <div>Account</div></a>
@@ -117,6 +117,9 @@
     <!---MAIN SCREEN-->
     <div class="main-screen flex-col">
         <div class="flex-row-container">
+            <div class="mt-3 me-3">
+                <i class="fa fa-solid fa-bars"></i>
+            </div>
             <div class="breadcrumb mt-3 mb-0" style="--bs-breadcrumb-divider: '>';">
                 <span class="breadcrumb-item"><a href="#">CS4550.12631.202410</a></span>
                 <span class="breadcrumb-item" aria-current="page">Assignments</span>
@@ -196,10 +199,7 @@
                             <label class="flex-col col-3 text-end" for="select-group">Assignment Group</label>
                             <div class="form-control-center flex-col col-7">
                                 <select class="form-select" id="select-group">
-                                    <option selected>None</option>
-                                    <option>she/her/hers</option>
-                                    <option>he/him/his</option>
-                                    <option>they/them/theirs</option>
+                                    <option selected>ASSIGNMENTS</option>
                                 </select>
                             </div>
                             
@@ -211,24 +211,7 @@
                             <label  class="flex-col col-3 text-end" for="select-grade-type">Display Grade as</label>
                             <div class="form-control-center flex-col col-7">
                                 <select class="form-select" id="select-grade-type">
-                                    <option selected>None</option>
-                                    <option>she/her/hers</option>
-                                    <option>he/him/his</option>
-                                    <option>they/them/theirs</option>
-                                </select>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <div class="flex-row mb-3 col-10">
-                            <label class="flex-col col-3 text-end" for="select-grade-type">Online</label>
-                            <div class="form-control-center flex-col col-7">
-                                <select class="form-select" id="select-grade-type">
-                                    <option selected>None</option>
-                                    <option>she/her/hers</option>
-                                    <option>he/him/his</option>
-                                    <option>they/them/theirs</option>
+                                    <option selected>Percentage</option>
                                 </select>
                             </div>
                             
@@ -298,15 +281,35 @@
                     <!--Assign To-->
                     <div class="text-center">
                         <div class="flex-row mb-3 col-10">
-                            <label style="vertical-align: top;" class="flex-col col-3 text-end text-top" for="select-grade-type">Submission Type</label>
+                            <label style="vertical-align: top;" class="flex-col col-3 text-end text-top" for="select-grade-type">Assign</label>
                             <div class="form-control-center form-group flex-col col-7">
-                                <div class="input-group flex-nowrap">
+                                <div class="flex-row-container">
+                                    <div class="text-start col-6 me-2">
+                                        <b>Assign to</b>
+                                    </div>
+                                </div>
+                                <select class="form-select mb-3" id="select-assign-to">
+                                    <option selected>Everyone</option>
+                                </select>
+                                <div class="flex-row-container">
+                                    <div class="text-start col-6 me-2">
+                                        <b>Due</b>
+                                    </div>
+                                </div>
+                                <div class="input-group flex-nowrap mb-3">
                                     
                                     <input type="datetime-local" class="form-control" value="2023-9-18" aria-label="Username" aria-describedby="addon-wrapping">
                                     <span class="input-group-text" id="addon-wrapping"><i class="fa-regular fa-calendar-days"></i></span>
                                 </div>
-                                <div class="flex-row-container float-start">Due</div>
                                 <div class="flex-row-container">
+                                    <div class="text-start col-6 me-2">
+                                        <b>Available from</b>
+                                    </div>
+                                    <div class="text-start flex-nowrap">
+                                        <b>Until</b>
+                                    </div>
+                                </div>
+                                <div class="flex-row-container mb-3">
                                     <div class="col-6 me-2">
                                         <div class="input-group flex-nowrap">
                                             <input type="datetime-local" class="form-control" value="2023-9-18" aria-label="Username" aria-describedby="addon-wrapping">
@@ -318,7 +321,9 @@
                                         <span class="input-group-text" id="addon-wrapping"><i class="fa-regular fa-calendar-days"></i></span>
                                     </div>
                                 </div>
-                                
+                                <div class="flex-row-container">
+                                    <button class="btn col-12"><i class="fa-solid fa-plus"></i>Add</button>
+                                </div>
                             </div>
                             
                         </div>
@@ -334,157 +339,6 @@
         
     </div>
 </div>
-
-    <!--OLD-->
-    <table width="100%">
-        <thead>
-        </thead>
-        <tbody valign = "top">
-            <!---Kanbas Navigation-->
-            <td>
-                <ul>
-                    <li><a href="../accountNav.html">Account</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="../courseNav.html">Courses</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Inbox</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Commons</a></li>
-                    <li><a href="#">Help</a></li>
-                </ul>
-            </td>
-            <!---Course Navigation-->
-            <td>
-                <ul>
-                    <li><a href="../home.html">Home</a></li>
-                    <li><a href="#">Modules</a></li>
-                    <li><a href="#">Piazza</a></li>
-                    <li><a href="#">Zoom Meetings</a></li>
-                    <li><a href="index.html">Assignments</a></li>
-                    <li><a href="#">Quizzes</a></li>
-                    <li><a href="../grades.html">Grades</a></li>
-                    <li><a href="#">People</a></li>
-                    <li><a href="#">Panopto Video</a></li>
-                    <li><a href="#">Discussions</a></li>
-                    <li><a href="#">Announcements</a></li>
-                    <li><a href="#">Pages</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Rubrics</a></li>
-                    <li><a href="#">Outcomes</a></li>
-                    <li><a href="#">Collaborations</a></li>
-                    <li><a href="#">Syllabus</a></li>
-                    <li><a href="#">Settings</a></li>
-                </ul>
-            </td>
-            <!---Assignments Editor-->
-            <td>
-                <select>
-                    <option selected>SpeedGrader</option>
-                </select>
-                <hr>
-                <h3>Assignment Name</h3>
-                <input value="A1-ENV + HTML">
-                <p><textarea>This is the assignment description.</textarea></p>
-                <p>
-                    <div><label for="points">Points</label></div>
-                    <input id="points" type="number" value="100"/>
-
-                </p>
-                
-                
-                <p>
-                    <div><label for="group-select">Assignment Group</label></div>
-                    <select id="group-select">
-                        <option selected>Assignments</option>
-                    </select>
-                    
-                </p>
-
-                <p>
-                    <div><label for="disp-grade-select">Display Grade as</label></div>
-                    <select id="disp-grade-select">
-                        <option selected>Percentage</option>
-                    </select>
-                </p>
-                
-                <p>
-                    <div><label for="sub-type-select">Submission Type</label></div>
-                    <select id="sub-type-select">
-                        <option selected>Online</option>
-                    </select>
-                </p>
-
-                <div>Online Entry Options</div>
-                <input type="checkbox" name="check-entry-options" id="chk-text-entry"/>
-                <label for="chk-text-entry">Text Entry</label> </br>
-                <input type="checkbox" name="check-entry-options" id="chk-web-url"/>
-                <label for="chk-web-url">Website URL</label> </br>
-                <input type="checkbox" name="check-entry-options" id="chk-media-rec"/>
-                <label for="chk-media-rec">Media Recordings</label> </br>
-                <input type="checkbox" name="check-entry-options" id="chk-stud-anno"/>
-                <label for="chk-stud-anno">Student Annotations</label> </br>
-                <input type="checkbox" name="check-entry-options" id="chk-file-up"/>
-                <label for="chk-file-up">File Uploads</label> </br>
-
-                <p>
-                    <div><label for="attempts-select">Submission Attempts</label></div>
-                    <select id="attempts-select">
-                        <option selected>Unlimited</option>
-                    </select>
-                </p>
-
-                <p>
-                    <div><label for="plagiarism-select">Plagiarism Review</label></div>
-                    <select id="plagiarism-select">
-                        <option selected>None</option>
-                    </select>
-                </p>
-
-                <p>
-                    <div>Group Assignment</div>
-                    <input type="checkbox" id="chk-group-assign" name="check-group-assign"/>
-                    <label for="chk-group-assign">This is a group assignment</label>
-                </p>
-
-                <p>
-                    <div>Peer Reviews</div>
-                    <input type="checkbox" id="chk-peer-review" name="check-peer-review"/>
-                    <label for="chk-peer-review">Require Peer Reviews</label>
-                </p>
-
-                <p>
-                    <div><label for="text-assign-to">Assign to</label></div>
-                    <input id="text-assign-to" value="Everyone"/>
-                </p>
-
-                <p>
-                    <div>Due</div>
-                    <input type="date" value="2021-01-01"/>
-                </p>
-
-                <p>
-                    <div>Available from</div>
-                    <input type="date" value="2021-01-01"/>
-                </p>
-
-                <p>
-                    <div>Until</div>
-                    <input type="date" value="2021-01-01"/>
-                </p>
-                <form action="index.html">
-                    <button>Cancel</button>
-                    <button>Save</button>
-                </form>
-
-                
-
-
-                                
-
-            </td>
-        </tbody>
-    </table>
     
 </body>
 </html>

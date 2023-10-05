@@ -29,6 +29,10 @@ body {
     color: red;
 
 }
+.kanbas-nav img {
+    width: 60px; 
+    padding: 0px;
+}
 
 /*ACCOUNT NAVIGATION*/
 
@@ -243,6 +247,9 @@ li i{
     color:#b52828;
 }
 
+.fa-bars {
+    color: #b52828;
+}
 small {
     white-space: nowrap;
     text-decoration: none;
