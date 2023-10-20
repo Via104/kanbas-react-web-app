@@ -33,7 +33,7 @@ function Courses() {
           <HiBars3 className="fs-1 text-danger" />
         </div>
         <div class="breadcrumb mt-3 mb-0" style={{'--bs-breadcrumb-divider': '>',}}>
-          <span class="breadcrumb-item "><a href="#">{course.name}</a></span>
+          <span class="breadcrumb-item ">{course.name}</span>
           <span class="breadcrumb-item active" aria-current="page">{pathname.slice(pathname.lastIndexOf("/") + 1 , pathname.length)}</span>
         </div >
       </div>
