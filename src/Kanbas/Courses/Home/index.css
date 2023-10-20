@@ -1,0 +1,6 @@
+.primary {
+    flex-grow: 3;
+}
+.secondary {
+    flex-grow: 1;
+}

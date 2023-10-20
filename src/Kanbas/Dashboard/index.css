@@ -1,0 +1,19 @@
+.card {
+    width: 270px;
+    padding: 0px;
+    margin: 15px;
+    text-decoration: none;
+}
+.card .card-header {
+    padding: 0px;
+    height: 175px;
+}
+
+.card-link {
+    white-space: nowrap;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 215px;
+    display: inline-block;
+}
