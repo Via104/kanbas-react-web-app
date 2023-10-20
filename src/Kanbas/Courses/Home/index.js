@@ -1,7 +1,6 @@
 import ModuleList from "../Modules/ModuleList";
 import { BsThreeDotsVertical } from 'react-icons/bs'
 import './index.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Home() {
     return (
