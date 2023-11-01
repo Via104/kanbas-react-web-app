@@ -3,8 +3,8 @@ import './index.css';
 import {BsThreeDotsVertical} from 'react-icons/bs';
 function Modules() {
   return (
-    <div className="main flex-col">
-      <div className="d-flex">
+    <div className="container-fluid">
+      <div className="d-flex justify-content-end">
         <button className="btn btn-secondary me-1 float-end">Collapse All</button>
         <button className="btn btn-secondary me-1 float-end">View Progress</button>
         <div className="dropdown float-end">
@@ -19,10 +19,7 @@ function Modules() {
         </div>
         <button className="btn btn-danger me-1 float-end"><i class="fa-solid fa-plus"></i>Module</button>
         <button className="btn btn-secondary float-end"><BsThreeDotsVertical/></button>
-
-
       </div>
-
       <hr />
       <h2>Modules</h2>
       <ModuleList />
