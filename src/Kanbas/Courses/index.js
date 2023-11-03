@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { useParams, useLocation } from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import { Routes, Route, Navigate } from "react-router-dom";
@@ -9,25 +8,13 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import { HiBars3 } from 'react-icons/hi2'
 import './index.css'
 
-function Courses() {
+function Courses({courses}) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className="container-fluid">
-      {/* <h1>Course {course.name}</h1>
-      <div className="d-flex col-12">
-        <div class="mt-3 me-3">
-          <HiBars3 className="fs-1 text-danger" />
-        </div>
-        <div class="breadcrumb mt-3 mb-0" style={{'--bs-breadcrumb-divider': '>',}}>
-          <span class="breadcrumb-item "><a href="#">{course.name}</a></span>
-          <span class="breadcrumb-item active" aria-current="page">Assignments</span>
-        </div >
-
-        <hr/>
-      </div>
-      <hr/> */}
+      
       <div className="d-flex align-items-center ">
         <div class="mt-3 me-3">
           <HiBars3 className="fs-1 text-danger" />

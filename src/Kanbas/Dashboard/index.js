@@ -1,36 +1,74 @@
 import { Link } from "react-router-dom";
 import db from "../Database";
 import "./index.css";
-function Dashboard() {
-    const courses = db.courses;
+import { React, useState } from "react";
+
+function Dashboard({ courses, course, setCourse, addNewCourse,
+    deleteCourse, updateCourse }
+  ) {
+
+
     return (
-        <div className="container-fluid">
-            {/* <h1>Dashboard</h1> */}
-            <h1 class="display-6 ">Dashboard</h1>
-            <hr/>
-            
-            <div class="dash-published-courses">
-                <h4>Published Courses (24)</h4>
-                <hr/>
-            </div> 
-            <div className="d-flex flex-wrap">
+        <div>
+            <h1>Dashboard</h1>
+            <button className="btn btn-primary me-3" onClick={updateCourse}>Update</button>
+
+            <button className="btn btn-success" onClick={addNewCourse}>Add</button>
+            <h5>Course</h5>
+            <input
+                value={course.name}
+                className="form-control"
+                onChange={(e) => setCourse({ ...course, name: e.target.value })}
+            />
+            <input
+                value={course.number}
+                className="form-control"
+                onChange={(e) => setCourse({ ...course, number: e.target.value })}
+            />
+            <input
+                value={course.startDate}
+                className="form-control"
+                type="date"
+                onChange={(e) => setCourse({ ...course, startDate: e.target.value })}
+            />
+            <input
+                value={course.endDate}
+                className="form-control"
+                type="date"
+                onChange={(e) => setCourse({ ...course, endDate: e.target.value })}
+            />
+
+            <div className="list-group">
                 {courses.map((course) => (
                     <Link
                         key={course._id}
                         to={`/Kanbas/Courses/${course._id}`}
-                        className="col-12 col-md-5 col-lg-4"
+                        className="list-group-item"
                     >
-                        {<div className="card" >
-                            <div class="card-header bg-primary">
-                            </div>
-                            <div class="card-body">
-                                <strong className="card-link">{course.number} {course.name}</strong>
-                                <p class="card-text text-muted">
-                                    <small>{course.startDate} to {course.endDate}</small>
-                                </p>
-                                <a href="#" role="button"><i class="fa fa-regular fa-newspaper"></i></a>
-                            </div>
-                        </div>}
+                        <span className="me-3">{course.name}</span>
+                        <span className="float-end">
+                            <button
+                                className="btn btn-danger me-3"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    deleteCourse(course._id);
+                                }}
+                            >
+                                Delete
+                            </button>
+
+                            <button
+                                className="btn btn-warning"
+                                onClick={(event) => {
+                                    event.preventDefault();
+                                    setCourse(course);
+                                }}
+
+                            >
+                                Edit
+                            </button>
+                        </span>
+
                     </Link>
                 ))}
             </div>
