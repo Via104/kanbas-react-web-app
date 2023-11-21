@@ -9,11 +9,15 @@ import { HiBars3 } from 'react-icons/hi2'
 import './index.css'
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+// const API_BASE = process.env.REACT_APP_API_BASE;
+// const MODULES_URL = `${API_BASE}/modules`;
+// const COURSES_URL = `${API_BASE}/courses`;
 function Courses() {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const URL = "http://localhost:4000/api/courses";
+  // const URL = "http://localhost:4000/api/courses";
+  const URL = "https://kanbas-node-server-app-ub0o.onrender.com/api/courses";
+  // const URL = COURSES_URL;
   const [course, setCourse] = useState({});
   const findCourseById = async (courseId) => {
     const response = await axios.get(

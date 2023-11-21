@@ -6,9 +6,9 @@ import { React, useState } from "react";
 function Dashboard({ courses, course, setCourse, addNewCourse,
     deleteCourse, updateCourse }
   ) {
-
-
+    console.log(`variable: ${process.env.REACT_APP_API_BASE}`)
     return (
+        
         <div>
             <h1>Dashboard</h1>
             <button className="btn btn-primary me-3" onClick={updateCourse}>Update</button>
