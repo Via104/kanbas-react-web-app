@@ -1,5 +1,9 @@
 import KanbasNavigation from "./KanbasNavigation";
 import Dashboard from "./Dashboard";
+import Signin from "./users/signin";
+import Signup from "./users/signup";
+import UserTable from "./users/table";
+import Account from "./users/account";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Courses from "./Courses";
 import db from "./Database";
@@ -15,11 +19,11 @@ function Kanbas() {
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
   // const API_BASE = process.env.REACT_APP_API_BASE;
-  // const MODULES_URL = `${API_BASE}/modules`;
   // const COURSES_URL = `${API_BASE}/courses`;
   // const URL = "http://localhost:4000/api/courses";
-  const URL = "https://kanbas-node-server-app-ub0o.onrender.com/api/courses";
   // const URL = COURSES_URL;
+  const URL = "https://kanbas-node-server-app-ub0o.onrender.com/api/courses";
+
   const findAllCourses = async () => {
     const response = await axios.get(URL);
     setCourses(response.data);
@@ -59,7 +63,8 @@ function Kanbas() {
       <div className="d-flex">
         <Routes>
           <Route path="/" element={<Navigate to="Dashboard" />} />
-          <Route path="Account" element={<h1>Account</h1>} />
+          <Route path="/Account" element={<Account/>} />
+          <Route path="/Account/:userId" element={<Account/>} />
           <Route path="Dashboard" element={<Dashboard
             courses={courses}
             course={course}
@@ -69,6 +74,9 @@ function Kanbas() {
             updateCourse={updateCourse} />
           } />
           <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
+          <Route path="/signin" element={<Signin/>} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/users" element={<UserTable/>} />
         </Routes>
       </div>
       </Provider>
