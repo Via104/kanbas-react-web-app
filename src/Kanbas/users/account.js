@@ -14,6 +14,8 @@ function Account() {
   const fetchAccount = async () => {
     const account = await client.account();
     setAccount(account);
+    console.log(account)
+    console.log(process.env.DB_CONNECTION_STRING)
   };
 
   const save = async () => {

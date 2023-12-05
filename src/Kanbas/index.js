@@ -18,11 +18,11 @@ function Kanbas() {
     name: "New Course", number: "New Number",
     startDate: "2023-09-10", endDate: "2023-12-15",
   });
-  // const API_BASE = process.env.REACT_APP_API_BASE;
-  // const COURSES_URL = `${API_BASE}/courses`;
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const COURSES_URL = `${API_BASE}/courses`;
   // const URL = "http://localhost:4000/api/courses";
-  // const URL = COURSES_URL;
-  const URL = "https://kanbas-node-server-app-ub0o.onrender.com/api/courses";
+  const URL = COURSES_URL;
+  // const URL = "https://kanbas-node-server-app-ub0o.onrender.com/api/courses";
 
   const findAllCourses = async () => {
     const response = await axios.get(URL);
