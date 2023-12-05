@@ -74,7 +74,7 @@ function Kanbas() {
             updateCourse={updateCourse} />
           } />
           <Route path="Courses/:courseId/*" element={<Courses courses={courses} />} />
-          <Route path="/signin" element={<Signin/>} />
+          <Route path="/Account/signin" element={<Signin/>} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/users" element={<UserTable/>} />
         </Routes>

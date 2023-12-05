@@ -12,10 +12,14 @@ function Account() {
   };
 
   const fetchAccount = async () => {
-    const account = await client.account();
-    setAccount(account);
+    try {
+      const account = await client.account();
+      setAccount(account);
+    }
+    catch(err) {
+      navigate("/kanbas/Account/signin")
+    }
     console.log(account)
-    console.log(process.env.DB_CONNECTION_STRING)
   };
 
   const save = async () => {
@@ -24,7 +28,7 @@ function Account() {
 
   const signout = async () => {
     await client.signout();
-    navigate("/kanbas/signin");
+    navigate("/kanbas/Account/signin");
   };
 
 
